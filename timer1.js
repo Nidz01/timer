@@ -7,8 +7,6 @@ const timer = process.argv.slice(2);
   if (timer !== []) {
     timer.sort(function(a, b){return a - b});
     for (let time of timer) {
-      console.log(time);
-      console.log(timer);
       if (isNaN(time) === false && time >= 0) {  
         setTimeout(() => {
           process.stdout.write('\x07');
